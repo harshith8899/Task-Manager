@@ -1,0 +1,37 @@
+/* Styles for the Task List */
+.task-list {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Priority Group styles */
+  .priority-group {
+    margin-bottom: 1rem;
+  }
+  
+  .priority-heading {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  .high-priority .priority-heading {
+    color: #e53e3e;
+  }
+  
+  .medium-priority .priority-heading {
+    color: #ecc94b;
+  }
+  
+  .low-priority .priority-heading {
+    color: #38a169;
+  }
+  
+  /* No Tasks message */
+  .no-tasks {
+    text-align: center;
+    padding: 2rem;
+    color: #718096;
+  }
+  

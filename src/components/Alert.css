@@ -1,0 +1,49 @@
+.alert-box {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    border-left: 4px solid;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    z-index: 1000;
+  }
+  
+  .alert-box.success {
+    background-color: #d1fae5; /* green-100 */
+    border-color: #34d399;     /* green-400 */
+    color: #047857;            /* green-700 */
+  }
+  
+  .alert-box.warning {
+    background-color: #fef3c7; /* yellow-100 */
+    border-color: #facc15;     /* yellow-400 */
+    color: #b45309;            /* yellow-700 */
+  }
+  
+  .alert-box.error {
+    background-color: #fecaca; /* red-100 */
+    border-color: #f87171;     /* red-400 */
+    color: #b91c1c;            /* red-700 */
+  }
+  
+  .alert-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .alert-icon {
+    padding-top: 0.25rem;
+    margin-right: 1rem;
+  }
+  
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .alert-message {
+    font-weight: bold;
+  }
+  

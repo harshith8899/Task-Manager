@@ -1,34 +1,348 @@
+/* General resets and improvements */
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #a6c0f3;
+  color: #172e4f;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Main container */
+.app-container {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: #f9fafb;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
+.app-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #32c64b;
+  margin-bottom: 0.25rem;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
+/* Grid layout */
+.app-grid {
+  display: grid;
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+@media (min-width: 1024px) {
+  .app-grid {
+    grid-template-columns: 1fr 2fr;
+  }
 }
+
+/* Card styles */
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #e6e6e6;
+}
+
+/* Input Fields */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #ffffff;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.form-textarea {
+  min-height: 6rem;
+}
+
+.form-button {
+  padding: 0.75rem;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+}
+
+/* Task item */
+.task-item {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.task-item-overdue {
+  border-color: #f87171;
+}
+
+.task-item-completed {
+  background-color: #f3f4f6;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.task-title-completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-button {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.task-button-delete {
+  color: #ef4444;
+}
+
+.task-description {
+  color: #6b7280;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.task-description-completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.task-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.task-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+/* Tag variants */
+.tag-high {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.tag-medium {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.tag-low {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.tag-work {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.tag-personal {
+  background-color: #ede9fe;
+  color: #5b21b6;
+}
+
+.tag-fitness {
+  background-color: #bbf7d0;
+  color: #065f46;
+}
+
+.tag-shopping {
+  background-color: #ffedd5;
+  color: #9a3412;
+}
+
+.tag-other {
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+/* Filters */
+.filter-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .filter-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Stats */
+.stats-container {
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.stats-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.stat-box {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.stat-value {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  margin-top: 0.75rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 0.375rem;
+}
+
+.progress-text {
+  font-size: 0.625rem;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  top: -1.25rem;
+}
+
+/* Alert */
+.alert {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  border-left: 4px solid;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  max-width: 24rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+}
+
+.alert-success {
+  background-color: #ecfdf5;
+  border-color: #10b981;
+  color: #065f46;
+}
+
+.alert-warning {
+  background-color: #fffbeb;
+  border-color: #f59e0b;
+  color: #92400e;
+}
+
+.alert-error {
+  background-color: #fef2f2;
+  border-color: #ef4444;
+  color: #b91c1c;
+}
+
+.alert-icon {
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.alert-message {
+  font-weight: 600;
+}
+ 

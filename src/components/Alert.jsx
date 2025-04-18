@@ -1,22 +1,23 @@
 import React from 'react';
 import { useTasks } from '../context/TaskContext';
+import './Alert.css'; // Import external CSS
 
 const Alert = () => {
   const { alert } = useTasks();
 
   if (!alert) return null;
 
-  const alertClasses = {
-    success: 'bg-green-100 border-green-400 text-green-700',
-    warning: 'bg-yellow-100 border-yellow-400 text-yellow-700',
-    error: 'bg-red-100 border-red-400 text-red-700'
-  };
-
   return (
-    <div className={`fixed top-4 right-4 border-l-4 p-4 rounded-lg shadow-lg ${alertClasses[alert.type]}`}>
-      <div className="flex items-center">
-        <div className="py-1">
-          <svg className={`h-6 w-6 mr-4`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div className={`alert-box ${alert.type}`}>
+      <div className="alert-content">
+        <div className="alert-icon">
+          <svg
+            className="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
             {alert.type === 'success' && (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             )}
@@ -29,7 +30,7 @@ const Alert = () => {
           </svg>
         </div>
         <div>
-          <p className="font-bold">{alert.message}</p>
+          <p className="alert-message">{alert.message}</p>
         </div>
       </div>
     </div>

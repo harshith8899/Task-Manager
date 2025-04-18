@@ -1,0 +1,164 @@
+/* General styles for task item */
+.task-item {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .task-completed {
+    background-color: #f8f9fa;
+  }
+  
+  .task-pending {
+    background-color: white;
+  }
+  
+  .task-overdue {
+    border-color: #f56565;
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+  
+  .task-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+  }
+  
+  .task-title-text {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #2d3748;
+  }
+  
+  .completed-text {
+    text-decoration: line-through;
+    color: #a0aec0;
+  }
+  
+  .active-text {
+    color: #2d3748;
+  }
+  
+  .task-actions button {
+    margin-left: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .task-edit {
+    color: #3182ce;
+  }
+  
+  .task-edit:hover {
+    color: #2b6cb0;
+  }
+  
+  .task-delete {
+    color: #e53e3e;
+  }
+  
+  .task-delete:hover {
+    color: #c53030;
+  }
+  
+  .task-description {
+    color: #4a5568;
+    margin-bottom: 0.75rem;
+  }
+  
+  .task-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .task-priority,
+  .task-category,
+  .task-due-date {
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .task-priority {
+    color: white;
+  }
+  
+  .task-category {
+    color: white;
+  }
+  
+  .task-due-date {
+    color: #2d3748;
+  }
+  
+  .priority-high {
+    background-color: #f56565;
+    color: white;
+  }
+  
+  .priority-medium {
+    background-color: #ecc94b;
+    color: white;
+  }
+  
+  .priority-low {
+    background-color: #48bb78;
+    color: white;
+  }
+  
+  .priority-default {
+    background-color: #edf2f7;
+    color: #2d3748;
+  }
+  
+  .category-work {
+    background-color: #63b3ed;
+    color: white;
+  }
+  
+  .category-personal {
+    background-color: #9f7aea;
+    color: white;
+  }
+  
+  .category-fitness {
+    background-color: #38a169;
+    color: white;
+  }
+  
+  .category-shopping {
+    background-color: #ed8936;
+    color: white;
+  }
+  
+  .category-default {
+    background-color: #edf2f7;
+    color: #2d3748;
+  }
+  
+  .overdue-date {
+    background-color: #fed7d7;
+    color: #e53e3e;
+  }
+  
+  .default-date {
+    background-color: #e2e8f0;
+    color: #2d3748;
+  }
+  

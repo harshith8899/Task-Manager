@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'; // Add useEffect here
+import React, { useState, useEffect } from 'react'; 
 import { useTasks } from '../context/TaskContext';
+import './TaskForm.css'; // Import the external CSS file
 
 const TaskForm = ({ taskToEdit, setTaskToEdit }) => {
   const { addTask, updateTask } = useTasks();
@@ -50,13 +51,13 @@ const TaskForm = ({ taskToEdit, setTaskToEdit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-semibold mb-4">
+    <form onSubmit={handleSubmit} className="task-form">
+      <h2 className="task-form__header">
         {taskToEdit ? 'Edit Task' : 'Add New Task'}
       </h2>
       
-      <div className="mb-4">
-        <label className="block text-gray-700 mb-2" htmlFor="title">
+      <div className="task-form__input-group">
+        <label className="task-form__label" htmlFor="title">
           Title*
         </label>
         <input
@@ -64,34 +65,34 @@ const TaskForm = ({ taskToEdit, setTaskToEdit }) => {
           type="text"
           value={task.title}
           onChange={(e) => setTask({ ...task, title: e.target.value })}
-          className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="task-form__input"
           required
         />
       </div>
 
-      <div className="mb-4">
-        <label className="block text-gray-700 mb-2" htmlFor="description">
+      <div className="task-form__input-group">
+        <label className="task-form__label" htmlFor="description">
           Description
         </label>
         <textarea
           id="description"
           value={task.description}
           onChange={(e) => setTask({ ...task, description: e.target.value })}
-          className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="task-form__input"
           rows="3"
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+      <div className="task-form__grid">
         <div>
-          <label className="block text-gray-700 mb-2" htmlFor="priority">
+          <label className="task-form__label" htmlFor="priority">
             Priority
           </label>
           <select
             id="priority"
             value={task.priority}
             onChange={(e) => setTask({ ...task, priority: e.target.value })}
-            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="task-form__input"
           >
             <option value="high">High</option>
             <option value="medium">Medium</option>
@@ -100,14 +101,14 @@ const TaskForm = ({ taskToEdit, setTaskToEdit }) => {
         </div>
 
         <div>
-          <label className="block text-gray-700 mb-2" htmlFor="category">
+          <label className="task-form__label" htmlFor="category">
             Category
           </label>
           <select
             id="category"
             value={task.category}
             onChange={(e) => setTask({ ...task, category: e.target.value })}
-            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="task-form__input"
           >
             <option value="work">Work</option>
             <option value="personal">Personal</option>
@@ -118,7 +119,7 @@ const TaskForm = ({ taskToEdit, setTaskToEdit }) => {
         </div>
 
         <div>
-          <label className="block text-gray-700 mb-2" htmlFor="dueDate">
+          <label className="task-form__label" htmlFor="dueDate">
             Due Date
           </label>
           <input
@@ -126,14 +127,14 @@ const TaskForm = ({ taskToEdit, setTaskToEdit }) => {
             type="datetime-local"
             value={task.dueDate}
             onChange={(e) => setTask({ ...task, dueDate: e.target.value })}
-            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="task-form__input"
           />
         </div>
       </div>
 
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200"
+        className="task-form__button"
       >
         {taskToEdit ? 'Update Task' : 'Add Task'}
       </button>

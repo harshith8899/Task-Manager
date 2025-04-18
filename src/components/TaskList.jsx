@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTasks } from '../context/TaskContext';
 import TaskItem from './TaskItem';
+import './TaskList.css'; // Import external CSS
 
 const TaskList = () => {
   const { tasks, getTasksByPriority } = useTasks();
@@ -10,10 +11,10 @@ const TaskList = () => {
   const lowPriorityTasks = getTasksByPriority('low');
 
   return (
-    <div className="space-y-6">
+    <div className="task-list">
       {highPriorityTasks.length > 0 && (
-        <div>
-          <h3 className="text-lg font-semibold mb-2 text-red-600">High Priority</h3>
+        <div className="priority-group high-priority">
+          <h3 className="priority-heading">High Priority</h3>
           {highPriorityTasks.map(task => (
             <TaskItem key={task.id} task={task} />
           ))}
@@ -21,8 +22,8 @@ const TaskList = () => {
       )}
 
       {mediumPriorityTasks.length > 0 && (
-        <div>
-          <h3 className="text-lg font-semibold mb-2 text-yellow-600">Medium Priority</h3>
+        <div className="priority-group medium-priority">
+          <h3 className="priority-heading">Medium Priority</h3>
           {mediumPriorityTasks.map(task => (
             <TaskItem key={task.id} task={task} />
           ))}
@@ -30,8 +31,8 @@ const TaskList = () => {
       )}
 
       {lowPriorityTasks.length > 0 && (
-        <div>
-          <h3 className="text-lg font-semibold mb-2 text-green-600">Low Priority</h3>
+        <div className="priority-group low-priority">
+          <h3 className="priority-heading">Low Priority</h3>
           {lowPriorityTasks.map(task => (
             <TaskItem key={task.id} task={task} />
           ))}
@@ -39,7 +40,7 @@ const TaskList = () => {
       )}
 
       {tasks.length === 0 && (
-        <div className="text-center py-8 text-gray-500">
+        <div className="no-tasks">
           No tasks found. Add a new task to get started!
         </div>
       )}
