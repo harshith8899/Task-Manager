@@ -1,27 +1,29 @@
-# Task Manager App  
+# Task Manager
 
-A lightweight task management tool built with React. Add tasks, set priorities, deadlines, and reminders. Filter tasks by assignee or status.  
+## Project Description
+The Task Manager is a simple, easy-to-use React application that allows users to manage their tasks efficiently. It offers the ability to add tasks, set priorities, set reminders, and deadlines, making it perfect for organizing work and personal life. The UI is designed for simplicity, with tasks organized into different categories such as "Work," "Personal," and "Others" for quick filtering.
 
-✨ **Live Demo**: [https://task-manager-app.vercel.app](https://task-manager-app.vercel.app)  
+## Features
+- **Add Tasks**: Users can add tasks with a description.
+- **Set Priorities**: Each task can have a priority level (e.g., High, Medium, Low).
+- **Set Reminders**: Users can set a reminder to get notified before a task deadline.
+- **Set Deadlines**: Tasks can have deadlines to keep track of when they need to be completed.
+- **Task Filtering**: Tasks can be filtered based on categories like Work, Personal, and Others for easy task management.
+- **Task Completion**: Mark tasks as completed to keep track of progress.
+- **Responsive Design**: The UI is mobile-friendly, ensuring it works across different devices.
 
-![Task Manager UI Screenshot](https://via.placeholder.com/800x400?text=Task+Manager+UI+Preview) *(Replace with actual screenshot)*  
+## Frontend
+- **React.js**: Used to build the interactive task management interface.
+- **React Hooks**: Manage the state of tasks and reactivity throughout the app.
+- **CSS**: Styled the task board, buttons, and form inputs for an easy-to-use interface.
 
-## Features  
-- **Add Tasks**: Quick input with title, description, and assignee.  
-- **Priority & Deadlines**: Set priority (Low/Medium/High) and due dates.  
-- **Reminders**: Optional reminders for upcoming deadlines.  
-- **Filtering**: View tasks by assignee, priority, or deadline.  
-- **Simple UI**: Clean, intuitive interface with zero clutter.  
+## Deployment
+- **Vercel**
+- Link: (https://task-manager-react.vercel.app)
 
-## Installation  
-1. Clone the repository:  
-   ```bash  
-   git clone https://github.com/your-username/task-manager.git  
+## Video Demonstration
+Watch the video demonstration here: 
 
+## Screenshots
+![Task Manager Preview]()
 
-### Key Notes:  
-1. Replace `your-username` and the demo link with your actual Vercel URL.  
-2. Add a real screenshot (e.g., `![Screenshot](./screenshot.png)`).  
-3. Expand **Technologies** if using libraries like `date-fns` for deadlines or `react-icons`.  
-
-Need any tweaks? Let me know! 🛠️
