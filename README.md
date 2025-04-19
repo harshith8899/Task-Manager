@@ -12,7 +12,7 @@ The Task Manager is a simple, easy-to-use React application that allows users to
 - **Task Completion**: Mark tasks as completed to keep track of progress.
 - **Responsive Design**: The UI is mobile-friendly, ensuring it works across different devices.
 
-## Frontend
+## Technologies
 - **React.js**: Used to build the interactive task management interface.
 - **React Hooks**: Manage the state of tasks and reactivity throughout the app.
 - **CSS**: Styled the task board, buttons, and form inputs for an easy-to-use interface.
