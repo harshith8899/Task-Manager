@@ -19,10 +19,10 @@ The Task Manager is a simple, easy-to-use React application that allows users to
 
 ## Deployment
 - **Vercel**
-- Link: (https://task-manager-react.vercel.app)
+- Link: (https://taskmanager-8cf1ts7bf-harshith8899s-projects.vercel.app/)
 
 ## Video Demonstration
-Watch the video demonstration here: ![link](https://drive.google.com/file/d/1Ap5x5vyajBMF9Nqml-wOIydcnebIsDa1/view?usp=drive_link)
+Video demonstration: [Video link](https://drive.google.com/file/d/1Ap5x5vyajBMF9Nqml-wOIydcnebIsDa1/view?usp=drive_link)
 
 ## Screenshots
 ![Task Manager Preview]()
