@@ -25,5 +25,13 @@ The Task Manager is a simple, easy-to-use React application that allows users to
 Video demonstration: [Video link](https://drive.google.com/file/d/1Ap5x5vyajBMF9Nqml-wOIydcnebIsDa1/view?usp=drive_link)
 
 ## Screenshots
-![Task Manager Preview]()
+![Task Manager Preview](https://github.com/harshith8899/Task-Manager/blob/master/Screenshots/1.png)
+
+![Task Manager Preview](https://github.com/harshith8899/Task-Manager/blob/master/Screenshots/2.png)
+
+![Task Manager Preview](https://github.com/harshith8899/Task-Manager/blob/master/Screenshots/3.png)
+
+![Task Manager Preview](https://github.com/harshith8899/Task-Manager/blob/master/Screenshots/4.png)
+
+![Task Manager Preview](https://github.com/harshith8899/Task-Manager/blob/master/Screenshots/5.png)
 
